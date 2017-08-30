@@ -1,0 +1,22 @@
+The interpreter developed is only for a defined set of python grammar rules.
+
+Grammar rules :
+
+statements  s ::=  x = e  |   print e  | s s
+expressions e ::=  x  |  n  |  e + e  |  e - e  |  e * e  | e / e
+variables   x
+integers    n
+
+Implementation:
+
+In this project, initial steps are skipped and we directly generate the abstract syntax tree
+for the given piece of code using the ast module provided by python.
+
+The given input file is read line wise and the ast is computed. Once the abstract syntax tree is generated,
+traverse the tree searching for assign and print statements.We just need to evaulate the expressions to the right
+side of assign operator and print statement for the given grammar.
+
+The right nodes comprise of an arithmetic expression which are computed recursively while traversing down
+the tree. Once the value is computed, based on the type of statement, we either print it or store the variable value
+in a map for further computations. As there is no functions mentioned for the given grammar, a single map can
+be used for implementing symbol table.
