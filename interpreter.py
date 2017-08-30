@@ -1,5 +1,5 @@
 import ast
-import compiler
+import sys
 
 import operator as op
 
@@ -20,7 +20,7 @@ def evaluate(node):
     elif isinstance(node, ast.UnaryOp):
         return operators[type(node.op)](evaluate(node.operand))
 
-code = open('ex-2.py',"r") # change the file for giving a different input
+code = open(sys.argv[1],"r") # change the file for giving a different input
 
 for line in code:
     if(line!='\n'):
