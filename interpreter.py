@@ -23,7 +23,7 @@ def evaluate(node):
 code = open(sys.argv[1],"r") # change the file for giving a different input
 
 for line in code:
-    if(line!='\n')
+    if(line!='\n'):
         # in the given grammar only two types of expressions are possible. an assignment and a print statement.So handled these two
         #cases only
         a = ast.parse(line,mode='exec')
