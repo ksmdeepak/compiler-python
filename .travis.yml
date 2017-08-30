@@ -3,4 +3,4 @@ matrix:
   include:
   - python: "2.7"
     env: TEST_SUITE=suite_2_7
-script: python interpreter.py
+script: python interpreter.py ex-2.py
