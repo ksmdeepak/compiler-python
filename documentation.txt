@@ -20,3 +20,5 @@ The right nodes comprise of an arithmetic expression which are computed recursiv
 the tree. Once the value is computed, based on the type of statement, we either print it or store the variable value
 in a map for further computations. As there is no functions mentioned for the given grammar, a single map can
 be used for implementing symbol table.
+
+Note : pass the input file name as an argument while executing.
